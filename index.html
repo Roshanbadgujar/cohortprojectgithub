@@ -1,34 +1,49 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ek Chhoti Si Baat</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4xj5c5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="card slide-in">
-      <h2>Hey... bas ek baar sun le</h2>
-      <p>Bin kuch expect kiye... sirf ek chhoti si baat kehni thi 🙏</p>
+<body class="bg-gray-100 min-h-screen">
+  <header class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold">GitHub</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:underline">Pull requests</a></li>
+          <li><a href="#" class="hover:underline">Issues</a></li>
+          <li><a href="#" class="hover:underline">Marketplace</a></li>
+          <li><a href="#" class="hover:underline">Explore</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <div class="card delay-1 slide-in">
-      <p>Shayad maine woh boundary cross kar di jahan nahi karni chahiye thi.</p>
-      <p>Tu special hai — isliye care kiya. Par tareeka galat tha... sorry 💔</p>
+  </header>
+  <main class="container mx-auto mt-8">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold mb-4">Search GitHub Users</h2>
+      <form id="github-search-form" class="flex items-center space-x-4">
+        <input type="text" id="github-username" placeholder="Enter GitHub username" required
+          class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button type="submit" 
+          class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Search
+        </button>
+      </form>
     </div>
-
-    <div class="card delay-2 slide-in">
-      <p>Main tujhe samajhne ki koshish kar raha hoon... bina pressure ke.</p>
-      <p>Tu khush rehna... wahi mere liye kaafi hai ❤️</p>
+    <div class="user mt-6">
+      <div class="repos bg-white p-4 rounded-lg shadow-md">
+        <!-- User repositories will be displayed here -->
+      </div>
     </div>
-
-    <div class="emoji bounce">😊</div>
-
-    <button onclick="closeCard()" class="close-btn">Bas itna hi... Thank you ❤️</button>
-  </div>
-
-  <script src="app.js"></script>
+  </main>
+  <footer class="bg-gray-800 text-white py-4 mt-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 GitHub, Inc.</p>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
 </body>
 </html>

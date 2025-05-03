@@ -28,19 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayUserData(data) {
     userContainer.style.display = "block";
     userContainer.innerHTML = `
-      <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-md mx-auto">
-      <div class="flex items-center space-x-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-full mx-auto font-sans">
+      <div class="flex items-center gap-4">
         <img class="w-16 h-16 rounded-full border-2 border-gray-300" src="${data.avatar_url}" alt="User Avatar">
         <div>
-        <h2 class="text-xl font-bold text-gray-800">${data.login}</h2>
+        <h2 class="text-lg font-bold text-gray-800 m-0">${data.login}</h2>
         <a href="${data.html_url}" target="_blank" class="text-blue-500 hover:underline">View Profile</a>
         </div>
       </div>
-      <div class="mt-4">
-        <p class="text-gray-600"><span class="font-semibold">Account Type:</span> ${data.type}</p>
-        <p class="text-gray-600"><span class="font-semibold">Followers:</span> ${data.followers}</p>
-        <p class="text-gray-600"><span class="font-semibold">Following:</span> ${data.following}</p>
-        <p class="text-gray-600"><span class="font-semibold">Public Repos:</span> ${data.public_repos}</p>
+      <div class="mt-4 text-gray-600">
+        <p><span class="font-semibold">Account Type:</span> ${data.type}</p>
+        <p><span class="font-semibold">Followers:</span> ${data.followers}</p>
+        <p><span class="font-semibold">Following:</span> ${data.following}</p>
+        <p><span class="font-semibold">Public Repos:</span> ${data.public_repos}</p>
       </div>
       </div>
     `;
